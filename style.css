@@ -1,0 +1,91 @@
+body {
+    font-family: helvetica, arial, sans-serif;
+    margin: 2em;
+    color: #3D3D3D;
+}
+
+h1 {
+    font-style: italic;
+    color: #FF6F00;
+}
+
+video {
+    display: block;
+}
+
+section {
+    opacity: 1;
+    transition: opacity 500ms ease-in-out;
+}
+
+.removed {
+    display: none;
+}
+
+.invisible {
+    opacity: 0.2;
+}
+
+.camView {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    float: left;
+    width: calc(100% - 20px);
+    margin: 10px;
+    cursor: pointer;
+}
+
+.camView p {
+    position: absolute;
+    padding: 5px;
+    background-color: rgba(255, 111, 0, 0.85);
+    color: #FFF;
+    border: 1px dashed rgba(255, 255, 255, 0.7);
+    z-index: 2;
+    font-size: 12px;
+}
+
+.highlighter {
+    background: rgba(0, 255, 0, 0.25);
+    border: 1px dashed #fff;
+    z-index: 1;
+    position: absolute;
+}
+
+#webcamButton {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.scanner {
+    position: absolute;
+    top: 13%;
+    left: calc(50% - 11px);
+    /* top:50%; */
+    /* left:75%; */
+    transform: translate(-50%, -50%);
+    float: left;
+    width: 640px;
+    margin: 10px;
+    cursor: pointer;
+    height: 3px;
+    /* box-shadow: 0.5px 0 0 1px rgb(11, 31, 89); */
+    background: rgb(160, 219, 255);
+    z-index: 10;
+    animation: mymove 5s infinite;
+}
+
+@keyframes mymove {
+    0% {
+        top: 80px;
+    }
+    50% {
+        top :560px;
+    }
+    100% {
+        top :80px;
+    }
+}
